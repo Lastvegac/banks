@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<form th:action = "@{/add-process}" th:object = "${add}" method="post"><!--@ thao tac voi url $ thao tac object * thao tac field object-->
+    <label>User name:</label>
+    <input type="text" th:field="*{bankname}"/>
+    <br/>
+
+    <label>Full name:</label>
+    <input type="text" th:field="*{bankaccount}"/>
+    <br/>
+
+    <label>Password</label>
+    <input type="text" th:field="*{username}"/>
+    <br/>
+    <input type="submit" value="add"/>
+</form>
+
+</html>
